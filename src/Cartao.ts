@@ -1,11 +1,7 @@
 import MeioDePagamento from "./MeioDePagamento"
 
 export default class Cartao extends MeioDePagamento {
-  public constructor() {
-    super("Cartão")
-  }
-
-  public getName(): string {
-    return this.name
+  public constructor(value: number) {
+    super("Cartão", value)
   }
 }
