@@ -1,9 +1,19 @@
+import Revista from "./Revista"
+
 export default class Jornaleiro {
   private nome: string
-  private idade: number
+  private revistas: Revista[]
 
-  constructor(nome: string, idade: number) {
+  constructor(nome: string) {
     this.nome = nome;
-    this.idade = idade;
+    this.revistas = []
+  }
+
+  public addRevista(revista: Revista): void {
+    this.revistas.push(revista)
+  }
+
+  public getRevistas(): Revista[] {
+    return this.revistas
   }
 }
